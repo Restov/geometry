@@ -11,12 +11,12 @@ void GCircle(float x, float y, float r)
 }
 void GTriangle(float x1,float x2,float x3, float y1, float y2, float y3)
 {
-	float a = sqrt(sqr(x2 - x1) + sqr(y2 - y1));
-	float b = sqrt(sqr(x3 - x1) + sqr(y3 - y1));
-	float c = sqrt(sqr(x3 - x2) + sqr(y3 - y2));
+	float a = sqrt(pow((x2 - x1),2) + pow((y2 - y1),2));
+	float b = sqrt(pow((x3 - x1),2) + pow((y3 - y1),2));
+	float c = sqrt(pow((x3 - x2),2) + pow((y3 - y2),2));
 	float per = a + b + c;
 	float pper = per/2;
-	float area = sqrt(pper(pper-a)(pper-b)(pper-c));
+	float area = sqrt(pper*(pper-a)(pper-b)(pper-c));
 	cout << "Triangle(" << x1 <<"," << x2 << "," << x3 << "," << y1 << y2 <<
 	y3 << ")" << endl <<
     "Perimetr = " << per << endl << "Area = " << area;
