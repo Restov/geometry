@@ -1,14 +1,14 @@
-all: programm
+all: bin/programm
 
-programm: src/main.o src/func.o 
-	g++ -Wall -Werror src/main.o src/func.o 
+bin/programm: build/main.o build/func.o 
+	g++ -Wall -Werror build/main.o build/func.o 
 
-main.o: src/main.cpp
-	g++ -Wall -Werror -c src/main.cpp
+build/main.o: src/main.cpp
+	g++ -Wall -Werror -c src/main.cpp -o build/main.o
 
-func.o: src/func.cpp
-	g++ -Wall -Werror -c src/func.cpp
+build/pars.o: src/func.cpp
+	g++ -Wall -Werror -c src/func.cpp -o build/func.o
 
-
+	
 clean:
-	rm -rf src/*.o
+	rm -rf build/*.o
