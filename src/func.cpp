@@ -30,6 +30,8 @@ int prompt_menu_item()
          << "2. Triangle \n"
          << endl;
     cout << ">>> ";
+    cout << ">>> ";
+    cout << ">>> ";
     cin >> variant;
     return variant;
 }
