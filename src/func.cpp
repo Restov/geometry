@@ -18,7 +18,7 @@ void GTriangle(float x1, float x2, float x3, float y1, float y2, float y3)
     float per = a + b + c;
     float pper = per / 2;
     float area = sqrt(pper * (pper - a) * (pper - b) * (pper - c));
-    cout << "Triangle(" << x1 << "," << x2 << "," << x3 << "," << y1 << y2 << y3
+    cout << "Triangle(" << x1 << "," << x2 << "," << x3 << "," << y1 << "," << y2 << "," << y3
          << ")" << endl
          << "Perimetr = " << per << endl
          << "Area = " << area;
