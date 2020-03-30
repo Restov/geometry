@@ -3,8 +3,8 @@
 using namespace std;
 int main()
 {
-    int x, y, r;
-    int x1, x2, y1, y2, x3, y3;
+    float x, y, r;
+    float x1, x2, y1, y2, x3, y3;
     int variant = prompt_menu_item();
     switch (variant) {
     case 1: {
