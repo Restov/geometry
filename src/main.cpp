@@ -1,21 +1,24 @@
 #include "func.h"
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 int main()
 {
     float x, y, r;
-    float x1, x2, y1, y2, x3, y3;
-    int variant = prompt_menu_item();
-    switch (variant) {
-    case 1: {
-        cin >> x >> y >> r;
-        GCircle(x, y, r);
-        break;
+    cin >> x >> y >> r;
+    char a[3];
+    a[0] = x + '0';
+    a[1] = y + '0';
+    a[2] = r + '0';
+    for (int i = 0; i < 3; ++i) {
+        if (isdigit(a[i])) {
+            continue;
+        } else {
+            goto exit;
+        }
     }
-    case 2: {
-        cin >> x1 >> x2 >> x3 >> y1 >> y2 >> y3;
-        GTriangle(x1, x2, x3, y1, y2, y3);
-        break;
-    }
-    }
+
+    GCircle(x, y, r);
+exit:
+    return 0;
 }
+
