@@ -10,4 +10,4 @@ build/func.o: src/func.cpp
 	g++ -Wall -Werror -c src/func.cpp -o build/func.o
 
 clean:
-	rm -rf build/*.o
+	rm -rf *.o build/*.o
