@@ -1,5 +1,5 @@
 #include "circle.h"
-#include "pch.h"
+#include <gtest/gtest.h>
 TEST(Circle, isCheck) {
   bool k = CircleCheck("1", "2", "3");
   bool c = CircleCheck("1235.123", "64234.13123", "1256.1421");
