@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 float P = 3.14;
-int CircleCheck(char* x, char* y, char* r)
+bool CircleCheck(char* x, char* y, char* r)
 {
     float x1, y1, r1;
     if (isdigit(x[0]) || isdigit(x[1])) {
@@ -15,34 +15,35 @@ int CircleCheck(char* x, char* y, char* r)
                     if (isdigit(r[0])) {
                         r1 = atof(r);
                         if (r1 < 987654) {
-                            CircleOut(x1, y1, r1);
+                            return true;
                         } else
-                        cout << "Error";
+                            return false;
                     } else
-                    cout << "Error";
+                        return false;
                 } else
-                cout << "Error";
+                    return false;
             } else
-            cout << "Error";
+                return false;
         } else
-        cout << "Error";
+            return false;
     } else
-    cout << "Error";
-    return 0;
+        return false;
 }
-float CircleArea(float r)
+float CircleArea(char* r1)
 {
+    float r = atof(r1);
     float area = P * r * r;
     return area;
 }
-float CirclePerimetr(float r)
+float CirclePerimetr(char* r1)
 {
+    float r = atof(r1);
     float per = 2 * P * r;
     return per;
 }
-void CircleOut(float x1, float y1, float r1)
+void CircleOut(char* x, char* y, char* r)
 {
-    cout << "circle(" << x1 << " " << y1 << ", " << r1 << ")" << endl;
-    cout << "\tperimeter = " << CirclePerimetr(r1) << endl;
-    cout << "\tarea = " << CircleArea(r1) << endl;
+    cout << "circle(" << x << " " << y << ", " << r << ")" << endl;
+    cout << "\tperimeter = " << CirclePerimetr(r) << endl;
+    cout << "\tarea = " << CircleArea(r) << endl;
 }

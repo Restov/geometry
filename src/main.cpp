@@ -2,11 +2,15 @@
 #include <ctype.h>
 #include <iostream>
 using namespace std;
+
 int main()
 {
-    char x[100];
-    char y[100];
-    char r[100];
+    char x[15];
+    char y[15];
+    char r[15];
     cin >> x >> y >> r;
-    CircleCheck(x, y, r);
+    if(CircleCheck(x, y, r)) {
+        CircleOut(x, y, r);
+    }
+
 }
