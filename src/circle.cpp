@@ -1,8 +1,8 @@
-#include "func.h"
+#include "circle.h"
 #include <iostream>
 #include <cmath>
 using namespace std;
-float P = 3.141592653589793238466;
+float P = 3.14;
 int CircleCheck(char* x, char* y, char* r)
 {
     float x1, y1, r1;
@@ -30,9 +30,19 @@ int CircleCheck(char* x, char* y, char* r)
     cout << "Error";
     return 0;
 }
+float CircleArea(float r)
+{
+    float area = P * r * r;
+    return area;
+}
+float CirclePerimetr(float r)
+{
+    float per = 2 * P * r;
+    return per;
+}
 void CircleOut(float x1, float y1, float r1)
 {
     cout << "circle(" << x1 << " " << y1 << ", " << r1 << ")" << endl;
-    cout << "\tperimeter = " << 2 * P * r1 << endl;
-    cout << "\tarea = " << P * r1 * r1 << endl;
+    cout << "\tperimeter = " << CirclePerimetr(r1) << endl;
+    cout << "\tarea = " << CircleArea(r1) << endl;
 }

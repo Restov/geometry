@@ -1,10 +1,9 @@
-#include "func.h"
+#include "circle.h"
 #include <ctype.h>
 #include <iostream>
 using namespace std;
 int main()
 {
-    float pi = 3.14;
     char x[100];
     char y[100];
     char r[100];
