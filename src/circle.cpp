@@ -1,6 +1,6 @@
 #include "circle.h"
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
 float P = 3.14;
 bool CircleCheck(char* x, char* y, char* r)

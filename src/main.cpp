@@ -9,8 +9,7 @@ int main()
     char y[15];
     char r[15];
     cin >> x >> y >> r;
-    if(CircleCheck(x, y, r)) {
+    if (CircleCheck(x, y, r)) {
         CircleOut(x, y, r);
     }
-
 }
