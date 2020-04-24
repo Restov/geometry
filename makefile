@@ -24,7 +24,7 @@ $(EXECUTABLE): $(USER_DIR_S)/main.o $(USER_DIR_S)/circle.o
 $(USER_DIR_S)/main.o: src/main.cpp
 	g++ $(CFLAGS) -c src/main.cpp -o $(USER_DIR_S)/main.o
 
-$(USER_DIR_S)/Verbs.o: src/circle.cpp
+$(USER_DIR_S)/circle.o: src/circle.cpp
 	g++ $(CFLAGS) -c src/circle.cpp -o $(USER_DIR_S)/circle.o
 
 
