@@ -4,7 +4,7 @@
 #define P 3.14
 using namespace std;
 const int MaxValue = 987654;
-bool CircleCheck(char* x, char* y, char* r)
+bool CircleCheck(char const* x, char const* y, char const* r)
 {
     float x1, y1, r1;
     if (isdigit(x[0]) || isdigit(x[1])) {
@@ -30,13 +30,13 @@ bool CircleCheck(char* x, char* y, char* r)
     } else
         return false;
 }
-float CircleArea(char* r1)
+float CircleArea(char const* r1)
 {
     float r = atof(r1);
     float area = P * r * r;
     return area;
 }
-float CirclePerimetr(char* r1)
+float CirclePerimetr(char const* r1)
 {
     float r = atof(r1);
     float per = 2 * P * r;

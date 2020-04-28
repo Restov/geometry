@@ -1,5 +1,6 @@
 #include "circle.h"
 #include <gtest/gtest.h>
+
 TEST(Circle, isCheck)
 {
     bool k = CircleCheck("1", "2", "3");
@@ -17,4 +18,16 @@ TEST(Circle, isNotCheck)
     ASSERT_EQ(false, b);
     ASSERT_EQ(false, minus);
     ASSERT_EQ(false, zero);
+}
+TEST(Perimetr, Valid)
+{
+    ASSERT_FLOAT_EQ(12.56, CirclePerimetr("2"));
+    ASSERT_FLOAT_EQ(6.28, CirclePerimetr("1"));
+    ASSERT_FLOAT_EQ(62.8, CirclePerimetr("10"));
+}
+TEST(Area, Valid)
+{
+    ASSERT_FLOAT_EQ(12.56, CircleArea("2"));
+    ASSERT_FLOAT_EQ(3.14, CircleArea("1"));
+    ASSERT_FLOAT_EQ(314, CircleArea("10"));
 }
