@@ -1,7 +1,7 @@
 #ifndef __CIRCLE_H
 #define __CIRCLE_H
-bool CircleCheck(char* x, char* y, char* r);
+bool CircleCheck(char const* x, char const* y, char const* r);
 void CircleOut(char* x1, char* y1, char* r1);
-float CircleArea(char* r);
-float CirclePerimetr(char* r);
+float CircleArea(char const* r);
+float CirclePerimetr(char const* r);
 #endif
